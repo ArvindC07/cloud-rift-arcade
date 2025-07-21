@@ -59,14 +59,18 @@ const Navigation = () => {
 
           {/* Auth Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="outline" className="btn-secondary">
-              <LogIn className="w-4 h-4 mr-2" />
-              Login
-            </Button>
-            <Button className="btn-gaming">
-              <User className="w-4 h-4 mr-2" />
-              Sign Up
-            </Button>
+            <Link to="/login">
+              <Button variant="outline" className="btn-secondary">
+                <LogIn className="w-4 h-4 mr-2" />
+                Login
+              </Button>
+            </Link>
+            <Link to="/signup">
+              <Button className="btn-gaming">
+                <User className="w-4 h-4 mr-2" />
+                Sign Up
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -101,14 +105,18 @@ const Navigation = () => {
                 </Link>
               ))}
               <div className="flex flex-col space-y-2 pt-4 border-t border-border">
-                <Button variant="outline" className="w-full">
-                  <LogIn className="w-4 h-4 mr-2" />
-                  Login
-                </Button>
-                <Button className="w-full btn-gaming">
-                  <User className="w-4 h-4 mr-2" />
-                  Sign Up
-                </Button>
+                <Link to="/login" onClick={() => setIsOpen(false)}>
+                  <Button variant="outline" className="w-full">
+                    <LogIn className="w-4 h-4 mr-2" />
+                    Login
+                  </Button>
+                </Link>
+                <Link to="/signup" onClick={() => setIsOpen(false)}>
+                  <Button className="w-full btn-gaming">
+                    <User className="w-4 h-4 mr-2" />
+                    Sign Up
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>
